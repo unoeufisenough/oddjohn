@@ -1,0 +1,81 @@
+.pageTitle {
+  display: flex;
+  align-items: center;
+  top: 0;
+  z-index: 100;
+}
+
+.pageTitle__h {
+  display: flex;
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.pageTitle__arrowWrap {
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.pageTitle__arrow {
+  transform: scale(2.5);
+  width: 10px;
+  height: 10px;
+  border: none;
+  background: none;
+  position: relative;
+  display: inline-block;
+}
+
+.pageTitle__arrow::before {
+  top: 2px;
+  right: 6px;
+  width: 6px;
+  height: 6px;
+  content: "";
+  position: absolute;
+  transform: rotate(-45deg);
+  box-shadow: 1px 1px 0 white, 2px 1px 0 white, 1px 2px 0 white, 2px 2px 0 white;
+}
+.pageTitle__arrow::after {
+  width: 0;
+  height: 0;
+  left: -1px;
+  bottom: 49%;
+  content: "•";
+  color: white;
+  line-height: 0;
+  font-size: 12px;
+  position: absolute;
+  transition: left 0.1s ease-out, bottom 0.1s ease-out,
+    letter-spacing 0.1s ease-out;
+}
+
+.pageTitle__arrow:hover,
+.pageTitle__arrow:focus {
+  outline: none;
+}
+.pageTitle__arrow:hover::after,
+.pageTitle__arrow:focus::after {
+  left: 1px;
+}
+.pageTitle__arrow:hover.-long::after,
+.pageTitle__arrow:focus.-long::after {
+  left: -0.19em;
+  letter-spacing: 0.1em;
+}
+
+.visually-hidden {
+  /*https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html*/
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}

@@ -1,0 +1,49 @@
+.nav {
+  position: sticky;
+  background-color: #333333;
+}
+
+.nav__logo {
+  text-decoration: none !important;
+  width: 100px;
+  object-fit: contain;
+}
+
+.nav__options {
+  list-style: none;
+  display: flex;
+}
+
+.nav__option {
+  display: flex;
+  align-items: center;
+}
+
+/* nav a = NavLink */
+.nav a {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none !important;
+}
+
+.nav__optionName {
+  pointer-events: none;
+  user-select: none;
+}
+
+.nav a:hover {
+  color: rgb(150, 150, 150);
+}
+
+/* .nav__option:hover {
+  border: 2px solid rgb(150, 150, 150);
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+} */
+
+/* .nav__optionActive {
+  background-color: grey;
+} */
